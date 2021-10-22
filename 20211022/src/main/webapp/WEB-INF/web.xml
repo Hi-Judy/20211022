@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>20211022</display-name>
+  
+  <!-- web.xml에서 servlet 매핑하기 -->
+  <servlet>
+  	<servlet-name>Login</servlet-name>
+  	<servlet-class>co.micro.prj.Login</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>Login</servlet-name>
+  	<url-pattern>/LO</url-pattern> <!-- url에서 /LO로 들어오면 Login 서블렛 연결한다. 
+  									Login 서블렛에서 //@WebServlet("/Login") 주석처리해도 /LO로 연결할 수 있다. -->
+  </servlet-mapping>
+  
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
